@@ -1,0 +1,28 @@
+
+'Compiling the program'
+
+Go in SimulationAssignment/src folder for java code and Makefile written by me.
+
+Staying within that directory, run make command, There are two possibilities:
+1): You get the error "make: Nothing to be done for `default'". The reason for this is that code is already compiled and ready to run. To recompile, first run 'make clean' and then run 'make'.
+
+2): You get following warning but compilation is successful
+Note: com/distributedcomputing/sandeep/Main.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+The reason for this warning is, i have used thread.stop() method in Main to stop detection nodes. For the sake of this assignment, this is not a major issue and such warnings can be ignored. In this case, compilation is however successful.
+
+'Running the program'
+
+Once the compilation is successful, following command can be written to run it (Make sure you are in same src directory):
+	
+	java -cp . com.distributedcomputing.sandeep.Main
+
+You can run above command multiple times and observe different outputs. My analysis of results is discussed in report.
+
+'Running the program by chaning probabilities'
+Open Main file by following command:
+nano com/distributedcomputing/sandeep/Main.java
+At lines 12 through 14, you can change the probabilites (Note that the sum of probabilities should be equal to 1; otherwise you will get an error). 
+After changing the probabilities save the file by doing CTRL+X, then typing Y and finally pressing Enter. 
+
+Repeat the compilation and run methodology discussed above.
