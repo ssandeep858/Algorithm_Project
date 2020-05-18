@@ -1,28 +1,25 @@
-
+Sandeep Singh (2000534322)
 'Compiling the program'
 
-Go in SimulationAssignment/src folder for java code and Makefile written by me.
+Go in algorithmProject/src folder for java code and Makefile written by me.
 
 Staying within that directory, run make command, There are two possibilities:
 1): You get the error "make: Nothing to be done for `default'". The reason for this is that code is already compiled and ready to run. To recompile, first run 'make clean' and then run 'make'.
 
 2): You get following warning but compilation is successful
-Note: com/distributedcomputing/sandeep/Main.java uses or overrides a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-The reason for this warning is, i have used thread.stop() method in Main to stop detection nodes. For the sake of this assignment, this is not a major issue and such warnings can be ignored. In this case, compilation is however successful.
+
+Note: Recompile with -Xlint:unchecked for errors due to deprecation for details.
+The reason for this warnings is that we have overriden some methods and it gives warnings in linux terminal but not in IDE . For the sake of this project, this is not an issue and such warnings can be ignored. In this case, compilation is however successful.
 
 'Running the program'
 
 Once the compilation is successful, following command can be written to run it (Make sure you are in same src directory):
 	
-	java -cp . com.distributedcomputing.sandeep.Main
+COMMAND:	java Main input.txt
+	where Main. java has the main method and "input.txt" is the file that has to be checked and is passed with args[0] arguments through the command line terminal.
 
-You can run above command multiple times and observe different outputs. My analysis of results is discussed in report.
-
-'Running the program by chaning probabilities'
-Open Main file by following command:
-nano com/distributedcomputing/sandeep/Main.java
-At lines 12 through 14, you can change the probabilites (Note that the sum of probabilities should be equal to 1; otherwise you will get an error). 
-After changing the probabilities save the file by doing CTRL+X, then typing Y and finally pressing Enter. 
-
-Repeat the compilation and run methodology discussed above.
+*Simplified Steps:
+1. go to algorithmProject/src
+2. make
+3.copy .txt file that we wantto check for the intervals.
+3. java Main filename.txt eg. here we have used input.txt file in src folder so the command we have used is java Main input.txt.
